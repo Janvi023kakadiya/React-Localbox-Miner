@@ -60,6 +60,7 @@ const EmployeCrud = () => {
 
     const handleDelete = (index) => {
         const updatedStorage = storage.filter((_, i) => i !== index);
+        localStorage.setItem("employees", JSON.stringify(updatedStorage));
         setStorage(updatedStorage);
     };
 
